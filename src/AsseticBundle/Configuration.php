@@ -91,6 +91,7 @@ class Configuration
     protected $default = array(
         'assets' => array(),
         'options' => array(),
+        'filters' => array(),
     );
 
     /**
@@ -220,6 +221,10 @@ class Configuration
 
         if (!isset($default['options'])) {
             $default['options'] = array();
+        }
+        
+        if (!isset($default['filters'])) {
+            $default['filters'] = array();
         }
 
         $this->default = $default;

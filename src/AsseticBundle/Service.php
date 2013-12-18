@@ -441,7 +441,7 @@ class Service
     public function prepareCollection($options, $name, Factory\AssetFactory $factory)
     {
         $assets = isset($options['assets']) ? $options['assets'] : array();
-        $filters = isset($options['filters']) ? $options['filters'] : array();
+        $filters = isset($options['filters']) ? $options['filters'] : $this->configuration->getDefault()['filters'];
         $options = isset($options['options']) ? $options['options'] : array();
         $options['output'] = isset($options['output']) ? $options['output'] : $name;
         $moveRaw = isset($options['move_raw']) && $options['move_raw'];
